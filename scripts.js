@@ -89,6 +89,34 @@ db.player.insertMany([
     }
 ])
 
+// find query
+db.player.find() 
 
-// db.player.find() 
-//db.player.find().pretty()
+//find pretty query
+db.player.find().pretty()
+
+//find in query
+db.player.find({teams:{$in:["india"]}})
+
+//find or query
+db.player.find({$or:[{age:{lte:22}},{_id:"manoj"}]}) 
+
+
+// find and query
+db.player.find({$and:[{_id:manoj},{age:22}]}) 
+
+//find nin query
+db.player.find({_id:{$nin:["manoj","dhoni"]}})
+
+//find sort query
+db.player.find().sort({numberOfMatches:1})
+
+// find limit query
+db.player.find().limit(2)
+
+//find skip query
+db.player.find().skip(2)
+
+//find projection query
+db.player.find({},{numberOfMatches:1})
+db.player.find({},{numberOfMatches:0})

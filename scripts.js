@@ -110,8 +110,13 @@ db.player.find({_id:{$nin:["manoj","dhoni"]}})
 
 //update query
 db.player.updateOne({_id:"dhoni"},{$set:{age:99}})
+//update or query
 db.player.updateMany({$or:[{_id:"manoj"},{_id:"sai"},{_id:"nattu"}]},{$set:{batsmanType:"left"}})
+//update and query
+db.player.updateMany({$and:[{age:{$gte:22}},{teams:{$in:["india"]}}]},{$set:{numberOfSixs:10}})
 
+// update and or 
+db.player.updateMany({$or:[{$and:[{shirtNumber:{$gt:10}},{teams:"india"}]},{$and:[{shirtNumber:{$lt:10}},{teams:"ap"}]}]},{$set:{numberOfSixs:0}})
 //find sort query
 db.player.find().sort({numberOfMatches:1})
 

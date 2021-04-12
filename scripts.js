@@ -108,6 +108,10 @@ db.player.find({$and:[{_id:manoj},{age:22}]})
 //find nin query
 db.player.find({_id:{$nin:["manoj","dhoni"]}})
 
+//update query
+db.player.updateOne({_id:"dhoni"},{$set:{age:99}})
+db.player.updateMany({$or:[{_id:"manoj"},{_id:"sai"},{_id:"nattu"}]},{$set:{batsmanType:"left"}})
+
 //find sort query
 db.player.find().sort({numberOfMatches:1})
 

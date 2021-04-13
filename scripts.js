@@ -117,6 +117,7 @@ db.player.updateMany({$and:[{age:{$gte:22}},{teams:{$in:["india"]}}]},{$set:{num
 
 // update and or 
 db.player.updateMany({$or:[{$and:[{shirtNumber:{$gt:10}},{teams:"india"}]},{$and:[{shirtNumber:{$lt:10}},{teams:"ap"}]}]},{$set:{numberOfSixs:0}})
+
 //find sort query
 db.player.find().sort({numberOfMatches:1})
 
@@ -129,3 +130,25 @@ db.player.find().skip(2)
 //find projection query
 db.player.find({},{numberOfMatches:1})
 db.player.find({},{numberOfMatches:0})
+
+
+db.student.insertMany([{_id:2,name:"giri",gendar:"male",department:"ece",place:"tpt",age:27,hobbies:"books"},
+{_id:3,name:"swetha",gendar:"female",department:"ece",place:"nlr",age:21,hobbies:"chatting"},
+{_id:4,name:"vikram",gendar:"male",department:"cse",place:"chennai",age:23,hobbies:"runing"},
+{_id:5,name:"suma",gendar:"female",department:"ece",place:"nlr",age:22,hobbies:"reading"},
+{_id:6,name:"vishnu",gendar:"male",department:"ece",place:"hyd",age:24,hobbies:"flirting"},
+{_id:7,name:"harshitha",gendar:"female",department:"cse",place:"tpt",age:25,hobbies:"walking"},
+{_id:8,name:"ruchitha",gendar:"female",department:"cse",place:"nyp",age:21,hobbies:"cooking"},
+{_id:9,name:"ravi",gendar:"male",department:"mech",place:"bnglr",age:25,hobbies:"bloging"},
+{_id:10,name:"nani",gendar:"male",department:"eee",place:"nlr",age:24,hobbies:"acting"},
+{_id:11,name:"sireesha",gendar:"female",department:"it",place:"chennai",age:30,hobbies:"roming"},
+{_id:12,name:"vandana",gendar:"female",department:"civil",place:"nyp",age:22,hobbies:"cricket"},
+{_id:13,name:"jayanth",gendar:"male",department:"cse",place:"tpt",age:26,hobbies:"cheating"},
+{_id:14,name:"lakshmi",gendar:"female",department:"cse",place:"nyp",age:28,hobbies:"chatting"},
+{_id:15,name:"bhargav",gendar:"male",department:"cse",place:"nyp",age:25,hobbies:"drinking"},
+{_id:16,name:"reddy",gendar:"male",department:"ece",place:"tpt",age:27,hobbies:"flirting"},
+{_id:17,name:"gopi",gendar:"male",department:"mech",place:"nyp",age:22,hobbies:"runing"},
+{_id:18,name:"bhavana",gendar:"female",department:"cse",place:"hyd",age:21,hobbies:"coding"},
+{_id:19,name:"revanth",gendar:"male",department:"ece",place:"tpt",age:28,hobbies:"books"},
+{_id:20,name:"yamini",gendar:"female",department:"cse",place:"nlr",age:19,hobbies:"drinking"},
+{_id:21,name:"suhash",gendar:"male",department:"ece",place:"tpt",age:24,hobbies:"cooking"},])

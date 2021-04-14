@@ -6,7 +6,7 @@ var len=cars.length;
 
 for(let i=0;i<cars.length;i++)
 {
-    console.log("--cars-",cars[i],i)
+    console.log("--1111111-",cars[i],i)
     if(cars[i]=="bmw"){
         console.log("----my dream car---")
         if(cars[i]=="mahendra"){

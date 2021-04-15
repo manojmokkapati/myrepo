@@ -305,29 +305,35 @@ var ratingData={
     ]
 }
 
-
-// var aps =[];
-// var dps =[];
-
-// for(let i=0;i< ratingData.filter.length;i++){
-// console.log( "",ratingData.filter[i])
-//  aps.push(ratingData.filter[i].ap)
-//   console.log(" ",aps)
-
-//   dps.push(ratingData.filter[i].dp)
-  
-    
-// }
-
-// console.log(" ",aps)
-// console.log("",dps)
-
-// console.log(ratingData.gdocids)
-
-
+var aps =[];
+var dps =[];
 var names=[];
-var ratings = ratingData.data.rating;
-var filter = ratingData.filter
-for(let i=0;i<ratings.length;i++) {
-      names.push(ratings[i].name)
-} console.log("",names)
+var ages=[];
+var rCount=[];
+
+ for(let i=0;i< ratingData.filter.length;i++){
+    console.log("",ratingData.filter[i])
+    aps.push(ratingData.filter[i].ap)
+    console.log(" ",aps)
+   
+    dps.push(ratingData.filter[i].dp)
+}
+
+
+for(let i=0;i< ratingData.data.rating.length;i++){
+    console.log(" --",ratingData.data.rating[i])
+ 
+ 
+   
+     names.push(ratingData.data.rating[i].name)
+ 
+     ages.push(ratingData.data.rating[i].age)
+     
+     rCount.push(ratingData.data.rating[i].ratings_count)
+  }
+
+console.log(" ",aps)
+console.log("",dps)
+console.log(" ",names)
+console.log("",ages)
+console.log(" ",rCount)

@@ -8,9 +8,16 @@
 //console.log(name)
 
 const validator = require('validator')
-const getNotes = require('./notes.js')
+// const getNote = require('./nodes.js')
+const getNotes = function(){
+    return 'your notes....'
+
+} 
 
 const msg = getNotes()
 console.log(msg)
 
 console.log(validator.isEmail('manoj@gmail.com'))
+ 
+
+

@@ -7,17 +7,28 @@
 //const name = 'manoj'
 //console.log(name)
 
-const validator = require('validator')
-// const getNote = require('./nodes.js')
-const getNotes = function(){
-    return 'your notes....'
 
-} 
+// var numbers=[0,2,4,6,8,10]; // array of even integirs
+// var nameAGe={name:'manoj',age:19};// object
+// var stg="123" //string
+// var ny=23;//integirs
+
+// var num=[];
+// var obj={};
+// var srin=""
+// var num= null
+// var nameAge=[{name:"manoj",age:22},{name:"ravi",age:33}];
+// var marieed= true
+
+
+const chalk = require('chalk')
+const getNotes = require('./nodes.js')
+
 
 const msg = getNotes()
 console.log(msg)
 
-console.log(validator.isEmail('manoj@gmail.com'))
- 
+const greenMsg = (chalk.blue.inverse.bold('success'))
 
 
+console.log(greenMsg)

@@ -50,7 +50,8 @@
 
 //     }
 
-var urls= {
+var urls= 
+{
     "init": {
         "errorCode": 0,
         "message": "Success",
@@ -191,6 +192,102 @@ var urls= {
     "🚀": "0.241ms"
 }
 
-for(let i=0; i<urls.main.feedData.length;i++) {
-    console.log("...",urls.main.feedData[i].url)
+// for(let i=0; i<urls.init.result.length;i++) {
+//     console.log("...",urls.init.result[i].url)
+// }
+ 
+// for(let i=0; i< urls.main.feedData.length;i++){
+// console.log("",urls.main.feedData[i].url)
+
+// }
+//  for(let i=0; i<urls.init.result.length;i++) {
+// console.log("",urls.init.result[i].title)
+
+//  }
+
+
+var news = {
+    type:"article",
+    newsTypes:{
+        publisher:"NDTV",
+        latestNews:[{
+            title:"today latest news",
+            org:"sports"
+        },
+        {
+            title:"yesterday latest news",
+            org:"india"
+        },
+        {
+            title:"today old news",
+            org:"covid"
+        }]
+    }
+} 
+
+
+
+    var newType = []
+    // console.log(news.newsTypes)
+    var run=news.newsTypes.latestNews;
+     for(let i=0;i<run.length;i++){
+        //  console.log(run[i])
+        //  var newObj = {
+        //      name : run[i].title,
+        //      company : run[i].org
+        //  }
+        //  newType.push(newObj)
+        var newObj1 = {}
+        newObj1.name =  run[i].title
+        if(run[i].org == "india"){
+            
+            newObj1.company = "bharat"
+            newType.push(newObj1)
+        }
+        
+
+
+     }
+     console.log(newType)
+
+// obj and array of object creation
+/* var person = {
+    name:"sai",
+    age:29,
+    color:"black"
 }
+
+var personOne = {}
+
+personOne.title = person.name
+personOne.years = person.age
+
+console.log(personOne)
+
+var personTwo = {}
+personTwo.name="manoj"
+personTwo.age = 22
+console.log(personTwo)
+
+var persons = []
+persons.push(person)
+persons.push(personOne)
+persons.push(personTwo)
+console.log(persons)
+
+
+var names = []
+names.push(person.name)
+names.push(personOne.title)
+names.push(personTwo.name)
+console.log(names)
+
+
+var personThree = {}
+personThree["name"] = "mani"
+personThree.age = 45
+console.log(personThree)
+
+ */
+
+

@@ -227,28 +227,28 @@ var news = {
 
 
 
-    var newType = []
-    // console.log(news.newsTypes)
-    var run=news.newsTypes.latestNews;
-     for(let i=0;i<run.length;i++){
+    // var newType = []
+    // // console.log(news.newsTypes)
+    // var run=news.newsTypes.latestNews;
+    //  for(let i=0;i<run.length;i++){
         //  console.log(run[i])
         //  var newObj = {
         //      name : run[i].title,
         //      company : run[i].org
         //  }
         //  newType.push(newObj)
-        var newObj1 = {}
-        newObj1.name =  run[i].title
-        if(run[i].org == "india"){
+    //     var newObj1 = {}
+    //     newObj1.name =  run[i].title
+    //     if(run[i].org == "india"){
             
-            newObj1.company = "bharat"
-            newType.push(newObj1)
-        }
+    //         newObj1.company = "bharat"
+    //         newType.push(newObj1)
+    //     }
         
 
 
-     }
-     console.log(newType)
+    //  }
+    //  console.log(newType)
 
 // obj and array of object creation
 /* var person = {
@@ -290,4 +290,36 @@ console.log(personThree)
 
  */
 
+var student={
+    name:"manoj",
+    dept:"ece",
+    id:01,
+    dob:28/12/1997,
 
+}
+var studentOne={}
+studentOne.name="ravi"
+studentOne.dept="cse"
+console.log(studentOne)
+
+var studentTwo={}
+studentTwo["name"]="bhargav"
+studentTwo["dept"]="mech"
+console.log(studentTwo)
+
+
+var stds=[]
+stds.push(student)
+stds.push(studentOne)
+stds.push(studentTwo)
+
+console.log(stds)
+
+
+  var stdNames=[]
+      stdNames.push(student.name)
+      stdNames.push(studentOne.name)
+      stdNames.push(studentTwo.name)
+    console.log(stdNames)
+
+  
